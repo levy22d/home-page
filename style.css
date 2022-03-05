@@ -1,0 +1,229 @@
+/* General Styles */
+::selection{
+  background: gray;
+}
+
+body{
+  background: #bdd6ff;
+  font-family: "Spartan", serif;
+}
+
+button, input{
+  font-family: "Spartan", serif;
+}
+
+button, i{
+  cursor: pointer;
+}
+
+/* Welcome Styles */
+.welcome{
+  text-align: center;
+  margin: 3rem;
+}
+
+.welcome-message{
+  font-size: 2rem;
+  margin: .1rem;
+  align-items: center;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  overflow-wrap: break-word;
+}
+
+.welcome-insert-name{
+  border: none;
+  border-bottom: 3px dashed black;
+  margin: 0 0 0 1em;
+  background: rgba(255, 255, 255, 0);
+  padding: .5em;
+  font-size: 1.5rem;
+}
+
+.welcome-insert-name:focus{
+  outline: none;
+  background: rgba(255, 255, 255, .5);
+}
+
+.welcome-edit{
+  background: black;
+  color: white;
+  font-size: .5rem;
+  border-radius: 5px;
+  padding: .5em;
+  margin: 0 0 0 1em;
+}
+
+.time{
+  font-size: 6rem;
+  margin: .1em;
+  font-family: "Barriecito", serif;
+}
+
+.date{
+  font-size: 2rem;
+  margin: .1em;
+}
+
+/* Bookmark Styles */
+.new-bookmark{
+  margin: 0 0 1em .5em;
+  padding: 1em;
+  background: black;
+  color: white;
+  border-radius: 10px;
+  border: none;
+}
+
+.bookmark-container{
+  min-height: 300px;
+  margin: 0 .5em;
+  background: rgba(255, 255, 255, .3);
+  border-radius: 10px;
+  display: flex;
+  gap: .7em;
+  flex-wrap: wrap;
+  padding: .7em;
+}
+
+.bookmark{
+  min-width: 100px;
+  background: white;
+  color: black;
+  height: 65px;
+  border-radius: 10px;
+  display: grid;
+  grid-gap: 10px;
+  padding: 1em;
+  overflow: auto;
+  grid-template-areas: ".    .    .    .    close"
+                       "name name name img img";
+}
+
+.close-bookmark{
+  grid-area: close;
+  cursor: pointer;
+}
+
+.bookmark-url{
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  grid-area: name;
+  margin: auto 0;
+  word-break: break-all;
+}
+
+.bookmark-img{
+  object-fit: contain;
+  grid-area: img;
+  width: 30px;
+  margin: auto 0;
+}
+
+/* Modal Styles */
+.modal-container{
+  display: none;
+  background: rgba(0, 0 , 0, .5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.modal{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  margin-left: -250px;
+  margin-top: -100px;
+  background: white;
+}
+
+.modal-top-bar{
+  display: flex;
+  justify-content: space-between;
+  background: black;
+  height: 55px;
+  align-content: center;
+}
+
+.modal-title{
+  padding: 0 0 0 1em;
+  color: white;
+}
+
+.close{
+  padding: 7px 0 0 0;
+  height: 24px;
+  background: #ff5c82;
+  width: 30px;
+  margin: auto 1em;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  text-align: center;
+}
+
+.close:hover{
+  background: #9e0025;
+}
+
+.modal-form{
+  display: flex;
+  gap: .3em;
+  flex-direction: column;
+  padding: 1em;
+}
+
+.modal-input{
+  padding: .3em;
+  margin: 0 0 .3em 0;
+}
+
+.modal-submit{
+  padding: .9em .5em .5em .5em;
+  margin: 1em 0 0 0;
+  border-radius: 10px;
+  border: none;
+  background: black;
+  color: white;
+}
+
+.modal-submit:hover{
+  background: gray;
+}
+
+.error{
+  color: #ff5c82;
+  text-align: center;
+}
+
+/* Media Queries */
+@media(max-width: 535px){
+  .modal{
+    width: 300px;
+    margin-left: -150px;
+  }
+}
+
+@media(max-width: 660px){
+  .welcome-message{
+    word-break: break-all;
+    gap: 10px;
+  }
+
+  .welcome-message:first-child{
+    font-size: 1.3rem;
+    flex: 5 1 1;
+  }
+
+  .welcome-insert-name{
+    width: 50px;
+    flex: 1 1 1;
+    margin: 5px;
+  }
+}

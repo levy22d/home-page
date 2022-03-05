@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Spartan|Barriecito">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+  <script async src="./script.js"></script>
+</head>
+<body>
+
+<section class="welcome">
+  <h2 class="welcome-message">Welcome/good afternoon, etc, {name}</h2>
+  <p class="time">time</p>
+  <p class="date">date</p>
+</section>
+
+  <section class="bookmarks">
+    <button class="new-bookmark black-button">New Bookmark</button>
+    <div class="bookmark-container"></div>
+
+    <div class="modal-container">
+      <div class="modal">
+        <div class="modal-top-bar">
+          <h3 class="modal-title">Add a Bookmark</h3>
+          <!-- <button class="close">X</button> -->
+          <i alt="close" class="fas fa-times close" tabindex="0"></i>
+        </div>
+        <form class="modal-form" name="modal-form">
+          <label for="bookmark-name">Bookmark name</label>
+          <input class="modal-input" type="text" name="bookmark-name" id="bookmark-name">
+          <label for="bookmark-url">Bookmark URL</label>
+          <input class="modal-input" type="text" name="bookmark-URL" id="bookmark-URL">
+          <button class="modal-submit black-button" type="submit">OK</button>
+          <p class="error"></p>
+        </form>
+      </div>
+    </div>
+
+  </section>
+
+</body>
+</html>
